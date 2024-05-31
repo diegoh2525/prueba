@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personas</title>
+    <link rel="stylesheet" href="asset/css/stylesEmpleados.css">
+    
+
+    <!-- Enlaces a Bootstrap y Bootswatch -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+
+    <!-- Librería de ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Vincular js de Usuario -->
+    <script src="js/ProyectoFinal/persona.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <label>Gestión de Personas</label>
+        </header>
+        <div id="inputData">
+            <table class="table">
+                <tr>
+                    <td>Nombre</td>
+                    <td>
+                        <input type="hidden" id="id" name="id">
+                        <input type="text" class="form-control" name="nombre" id="nombre" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Correo</td>
+                    <td>
+                        <input type="email" class="form-control" name="correo" id="correo" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Documento</td>
+                    <td>
+                        <input type="text" class="form-control" name="documento" id="documento" value="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="botones">
+            <input type="button" class="btn btn-secondary" value="Guardar" onclick="save()">
+        </div>
+        <br>
+        <div id="outputData">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Documento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="loadData">
+                    <!-- Aquí llegan los datos de la BD -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap (jQuery y Popper.js) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+<script>
+    all();
+</script>
